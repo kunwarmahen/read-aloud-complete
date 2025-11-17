@@ -116,9 +116,9 @@ python combined_server.py
 
 By default, the server listens on:
 
-````
+```
 http://localhost:5000
-
+```
 
 ### 3️⃣ Chrome Extension
 
@@ -135,7 +135,7 @@ Update the extension’s `API_URL` to point to your backend.
 cd mobile
 npm install
 npx expo start
-````
+```
 
 Then open using the Expo Go app or a simulator.
 
