@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Read Aloud Cloud",
+  "version": "2.0.0",
+  "description": "Listen to page content with cloud sync and mobile access",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": [
+    "http://localhost/*",
+    "http://127.0.0.1/*",
+    "https://api.readaloud.app/*"
+  ],
+  "action": {
+    "default_title": "Read Aloud Cloud"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["config.js", "auth_manager.js", "cloud_sync.js", "content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
